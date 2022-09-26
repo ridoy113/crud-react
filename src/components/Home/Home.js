@@ -1,9 +1,11 @@
 import React from 'react';
+import { Button } from 'react-bootstrap'
+
 
 const Home = () => {
     return (
         <div>
-            <h1>I am home</h1>
+            <Button variant="primary">Create User</Button>
         </div>
     );
 };
