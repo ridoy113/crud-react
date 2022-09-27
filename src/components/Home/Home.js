@@ -2,6 +2,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { Button, Table } from 'react-bootstrap'
 import { UserContext } from '../UserContext/UserContext';
+import './Home.css'
 
 
 const Home = () => {
@@ -31,6 +32,13 @@ const Home = () => {
                                 <td>{user.name}</td>
                                 <td>{user.position}</td>
                                 <td>{user.salary}</td>
+                                <td>
+                                    <Button className='action_btn' variant="success">Read</Button>
+
+                                    <Button className='action_btn' variant="info">Edit</Button>
+                                    
+                                    <Button className='action_btn' variant="danger">Delete</Button>
+                                </td>
                             </tr>
                         )
                     }
