@@ -36,7 +36,7 @@ const Home = () => {
                                     <Button className='action_btn' variant="success">Read</Button>
 
                                     <Button className='action_btn' variant="info">Edit</Button>
-                                    
+
                                     <Button className='action_btn' variant="danger">Delete</Button>
                                 </td>
                             </tr>
