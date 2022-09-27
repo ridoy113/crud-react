@@ -8,12 +8,12 @@ export const UserProvider = (props) => {
     const [users, setUsers] = useState([
         { id: 1, name: "Salman", position: "Front End Dev", salary: 28000 },
         { id: 2, name: "Jonny", position: "MERN Dev", salary: 30000 },
-        { id: 3, name: "Jon", position: "Full Stack Dev", salary: 40000 },
+        { id: 3, name: "Jon", position: "Full Stack Dev", salary: 40000 }
     ]);
 
     return (
         <UserContext.Provider value={[users, setUsers]}>
-            {props.child}
+            {props.children}
         </UserContext.Provider>
     )
 };

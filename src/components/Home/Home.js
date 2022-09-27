@@ -1,8 +1,14 @@
 import React from 'react';
+import { useContext } from 'react';
 import { Button, Table } from 'react-bootstrap'
+import { UserContext } from '../UserContext/UserContext';
 
 
 const Home = () => {
+
+    const [users, setUsers] = useContext(UserContext);
+
+
     return (
         <div>
             <Button variant="primary">Create User</Button>
@@ -10,30 +16,25 @@ const Home = () => {
             <Table striped bordered hover>
                 <thead>
                     <tr>
-                        <th>#</th>
-                        <th>First Name</th>
-                        <th>Last Name</th>
-                        <th>Username</th>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Salary</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td colSpan={2}>Larry the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
+                    {
+                        users.map(user =>
+                            <tr>
+                                <td>{user.id}</td>
+                                <td>{user.name}</td>
+                                <td>{user.position}</td>
+                                <td>{user.salary}</td>
+                            </tr>
+                        )
+                    }
+
                 </tbody>
             </Table>
 
