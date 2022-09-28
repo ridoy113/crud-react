@@ -7,7 +7,7 @@ import Delete from './components/Delete/Delete';
 
 function App() {
   return (
-    <div>
+    <div className='app'>
       <UserProvider>
         <Routes>
           <Route path="/delete/:id" element={<Delete />} />

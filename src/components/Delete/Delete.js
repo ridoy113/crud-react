@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Button, Modal } from 'react-bootstrap';
+import { Button, Card, Modal } from 'react-bootstrap';
 import { Link, useParams } from 'react-router-dom';
 import { UserContext } from '../UserContext/UserContext';
 import './Delete.css'
@@ -15,21 +15,27 @@ const Delete = () => {
     }
 
     return (
-        <div>
-            <Modal.Dialog>
-                <Modal.Header closeButton>
-                    <Modal.Title>Are You Sure?</Modal.Title>
-                </Modal.Header>
+        <div className='delete_modal'>
+            <Card>
+                <Card.Body>
 
-                <Modal.Footer>
-                    <Link to='/'>
-                        <Button className='delete_btn' variant="info">Cancel</Button>
-                        <Button
-                            onClick={() => deleteUser(id)}
-                            variant="danger">Delete</Button>
-                    </Link>
-                </Modal.Footer>
-            </Modal.Dialog>
+                    <Modal.Dialog>
+                        <Modal.Header>
+                            <Modal.Title>Are You Sure?</Modal.Title>
+                        </Modal.Header>
+
+                        <Modal.Footer>
+                            <Link to='/'>
+                                <Button className='delete_btn' variant="info">Cancel</Button>
+                                <Button
+                                    onClick={() => deleteUser(id)}
+                                    variant="danger">Delete</Button>
+                            </Link>
+                        </Modal.Footer>
+                    </Modal.Dialog>
+
+                </Card.Body>
+            </Card>
         </div>
     );
 };

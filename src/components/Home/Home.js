@@ -13,7 +13,7 @@ const Home = () => {
 
     return (
         <div>
-            <Button variant="primary">Create User</Button>
+            <Button className='create_btn' variant="primary">Create User</Button>
 
             <Table striped bordered hover>
                 <thead>
