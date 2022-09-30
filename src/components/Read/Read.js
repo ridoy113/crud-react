@@ -4,8 +4,8 @@ import './Read.css'
 
 const Read = () => {
     return (
-        <div>
-            
+        <div className='reaad'>
+
         </div>
     );
 };
