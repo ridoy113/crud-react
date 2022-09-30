@@ -11,7 +11,6 @@ const Read = () => {
     const { id } = useParams();
 
     const user = users.filter(user => user.id == id);
-    console.log(user);
 
     return (
         <div className='read'>
