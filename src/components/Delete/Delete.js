@@ -20,7 +20,7 @@ const Delete = () => {
                 <Card.Body>
 
                     <Modal.Dialog>
-                        <Modal.Header>
+                        <Modal.Header >
                             <Modal.Title>Are You Sure?</Modal.Title>
                         </Modal.Header>
 
